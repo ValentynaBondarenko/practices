@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <title>WebPractices</title>
+    <link rel="stylesheet" href="/static/style.css"/>
+</head>
+<body>
+
+<h1>WebPractices Form</h1>
+
+<form action="/login.html" method="POST">
+    <label for="message">Login:</label>
+    <input type="text" id="message" name="message" value="${message?if_exists}"/>
+    <input type="submit" value="Ok">
+</form>
+
+<div class="info">
+    <p>Message: <span class="message">${message?if_exists}</span></p>
+    <p>Method: ${method?if_exists}</p>
+    <p>URL: ${URL?if_exists}</p>
+    <p>PathInfo: ${pathInfo?if_exists}</p>
+    <p>SessionId: ${sessionId?if_exists}</p>
+    <p>Parameters: ${parameters?if_exists}</p>
+</div>
+
+</body>
+</html>
